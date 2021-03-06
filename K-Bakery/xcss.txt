@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Boogaloo&family=Ubuntu&display=swap");
+
+$ffp: "Boogaloo", cursive;
+$ffs: "Ubuntu", "sans-serif";
+
+body {
+  min-height: 300px;
+  margin: 0;
+}
+
+main {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  /*background: linear-gradient(to right, #b92b27, #1565c0);*/
+  background-color: #eee;
+  overflow: hidden;
+}
+
+.flowers_line {
+  position: absolute;
+  overflow: auto;
+  margin-top: 14em;
+  margin-left: 40em;
+}
+.header {
+  height: 100%;
+  width: 100%;
+
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    font-weight: 300;
+    font-size: 8rem;
+    color: black;
+    margin-bottom: 4em;
+    font-family: $ffp;
+    margin-top: -0.5em;
+    letter-spacing: 0.2em;
+  }
+}
+
+.waves {
+  position: absolute;
+  top: 85%;
+  left: 0;
+  width: 100%;
+  height: 20vh;
+  background-attachment: fixed;
+}
+
+/* Animation */
+.wave-paths {
+  use {
+    animation: move-waves 10s ease-in-out infinite;
+    fill: url(#wave-gradient);
+  }
+  use:nth-child(odd) {
+    animation-direction: reverse;
+    animation-duration: 13s;
+  }
+  use:nth-child(1) {
+    animation-delay: -2s;
+    opacity: 0.7;
+  }
+  use:nth-child(2) {
+    animation-delay: -3s;
+    opacity: 0.5;
+  }
+  use:nth-child(3) {
+    animation-delay: -4s;
+    opacity: 0.3;
+  }
+  use:nth-child(4) {
+    animation-delay: -5s;
+  }
+}
+
+@keyframes move-waves {
+  0% {
+    transform: translate3d(-30px, 0, 0);
+  }
+  50% {
+    transform: translate3d(30px, 0, 0);
+  }
+  100% {
+    transform: translate3d(-30px, 0, 0);
+  }
+}
