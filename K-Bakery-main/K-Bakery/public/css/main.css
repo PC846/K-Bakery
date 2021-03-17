@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=Acme&family=Akaya+Telivigala&display=swap");
+body {
+  min-height: 300px;
+  margin: 0;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  padding: 0;
+}
+
+main {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+}
+
+nav {
+  margin-top: -6em;
+  padding: 0;
+  font-family: "Acme", sans-serif;
+}
+
+ul {
+  border-bottom: #ffca75 2px solid;
+  margin: 120px auto 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center;
+  padding: 0;
+  max-width: 600px;
+}
+
+.dropdown_content {
+  display: none;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown_content {
+  display: block;
+  overflow: auto;
+  position: absolute;
+  margin-left: -1em;
+  padding: 0px;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+li {
+  position: relative;
+  padding: 15px 0;
+}
+
+a {
+  color: black;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  display: inline-block;
+  padding-bottom: 0.4em;
+  margin: 0;
+  position: relative;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  display: block;
+  background: none repeat scroll 0 0 transparent;
+  height: 2px;
+  width: 0;
+  background: transparent;
+  -webkit-transition: width 0.8s ease 0s, left 0.8s ease 0s;
+  transition: width 0.8s ease 0s, left 0.8s ease 0s;
+  -webkit-transform: scale(0, 1);
+          transform: scale(0, 1);
+  -webkit-transform-origin: center top;
+          transform-origin: center top;
+  -webkit-transition-duration: 0.25s;
+          transition-duration: 0.25s;
+}
+
+a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/**/
+a:hover {
+  color: #fb8085;
+}
+
+a:hover::after {
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+}
+
+.flowers_line {
+  position: absolute;
+  overflow: auto;
+  margin-top: 20em;
+  margin-left: 43em;
+  height: auto;
+  width: 550px;
+}
+
+.seashells1 {
+  position: absolute;
+  margin-left: 80em;
+  margin-top: 15em;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.seashells2 {
+  position: absolute;
+  height: 400px;
+  width: 400px;
+}
+
+.header {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header h1 {
+  font-weight: 300;
+  font-size: 5rem;
+  font-family: "Akaya Telivigala", cursive;
+  margin-top: 3em;
+  letter-spacing: 0.2em;
+  color: transparent;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f9c1b1), color-stop(74%, #fb8085));
+  background-image: linear-gradient(180deg, #f9c1b1 0%, #fb8085 74%);
+  background-clip: text;
+}
+
+.header h3 {
+  font-family: "Acme", sans-serif;
+  font-size: 1.5em;
+  margin-top: 8em;
+}
+
+.scene {
+  width: 100vw;
+  height: 50vh;
+  bottom: -7.5em;
+}
+
+.wave1 {
+  margin-left: 25em;
+}
+
+.wave2 {
+  margin-right: 20em;
+}
+
+.social_bar {
+  margin-top: -8em;
+  position: relative;
+}
+
+.social {
+  color: black;
+  cursor: pointer;
+  list-style: none;
+  padding: 0em 0em 0em 1em;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  float: right;
+}
+
+.social:hover {
+  color: #fb8085;
+}
+
+.logo {
+  padding: 1em 0em 0em 1em;
+}
+
+.block {
+  height: 4px;
+  background-color: #9cdef0;
+}
+
+@media screen and (min-width: 600px) {
+  ul {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+/*# sourceMappingURL=main.css.map */
